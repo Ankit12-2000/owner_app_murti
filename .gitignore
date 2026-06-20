@@ -15,6 +15,7 @@ dist-ssr
 # Env & build artifacts
 .env
 .env.*
+!.env.production
 dist-upload.zip
 
 # Editor directories and files
