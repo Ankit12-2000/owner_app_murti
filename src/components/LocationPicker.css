@@ -1,0 +1,186 @@
+.lp-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Input Row ── */
+.lp-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.lp-input {
+  flex: 1;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #1a1a2e;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.lp-input:focus {
+  outline: none;
+  border-color: #e87b35;
+  box-shadow: 0 0 0 3px rgba(232, 123, 53, 0.1);
+}
+
+.lp-locate-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e87b35;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.lp-locate-btn:hover { background: #d06a2a; }
+.lp-locate-btn:disabled { background: #c4956a; cursor: not-allowed; }
+
+/* ── Search ── */
+.lp-search-box {
+  position: relative;
+}
+
+.lp-search-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 38px;
+}
+
+.lp-search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  color: #1a1a2e;
+  flex: 1;
+  font-family: inherit;
+}
+
+.lp-search-input::placeholder { color: #9ca3af; }
+
+/* ── Suggestions ── */
+.lp-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  margin-top: 4px;
+  padding: 4px 0;
+  list-style: none;
+  z-index: 50;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.lp-suggestions li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #1a1a2e;
+  line-height: 1.4;
+  transition: background 0.15s;
+}
+
+.lp-suggestions li:hover {
+  background: #fef5ee;
+}
+
+.lp-suggestions li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Map ── */
+.lp-map-container {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1.5px solid #e5e7eb;
+}
+
+.lp-map {
+  width: 100%;
+  height: 250px;
+  border: none;
+  display: block;
+}
+
+.lp-map-hint {
+  font-size: 11px;
+  color: #9ca3af;
+  text-align: center;
+  padding: 6px;
+  margin: 0;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.lp-close-map {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #6b7280;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lp-close-map:hover { color: #1a1a2e; }
+
+/* ── Spinners ── */
+.lp-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: lp-spin 0.6s linear infinite;
+}
+
+.lp-spinner-sm {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #e5e7eb;
+  border-top-color: #e87b35;
+  border-radius: 50%;
+  animation: lp-spin 0.6s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes lp-spin { to { transform: rotate(360deg); } }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .lp-map { height: 160px; }
+}

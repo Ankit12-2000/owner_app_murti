@@ -1,0 +1,97 @@
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(2px);
+}
+
+.loader-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.loader-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #f3e8e0;
+  border-top: 4px solid #e87b35;
+  border-radius: 50%;
+  animation: loader-spin 0.8s linear infinite;
+}
+
+.loader-spinner.sm {
+  width: 20px;
+  height: 20px;
+  border-width: 2.5px;
+}
+
+.loader-spinner.white {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+}
+
+.loader-text {
+  margin-top: 16px;
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.loader-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.loader-brand-icon {
+  width: 40px;
+  height: 40px;
+  background: #e87b35;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-brand-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+.loader-brand-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Button spinner */
+.btn-loader {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-loader .loader-spinner {
+  width: 18px;
+  height: 18px;
+  border-width: 2.5px;
+}
+
+@keyframes loader-spin {
+  to { transform: rotate(360deg); }
+}

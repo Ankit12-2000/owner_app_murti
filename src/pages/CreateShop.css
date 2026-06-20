@@ -1,0 +1,392 @@
+.cs-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Left Panel ── */
+.cs-left {
+  width: 30%;
+  min-width: 300px;
+  background: #fdf0e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 36px;
+  box-sizing: border-box;
+}
+
+.cs-left-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cs-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.cs-brand-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: 1.5px;
+}
+
+.cs-headline {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a2e;
+  margin: 0 0 20px;
+  letter-spacing: -0.5px;
+}
+
+.cs-subtext {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4a4a5a;
+  margin: 0;
+}
+
+.cs-testimonial {
+  margin-top: auto;
+  padding-top: 48px;
+}
+
+.cs-avatars {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.cs-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fdf0e9;
+  margin-right: -10px;
+}
+
+.cs-quote {
+  font-size: 13px;
+  font-style: italic;
+  color: #5a5a6a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Right Panel ── */
+.cs-right {
+  flex: 1;
+  background: #fff;
+  padding: 48px 56px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.cs-form-wrapper {
+  max-width: 560px;
+}
+
+.cs-form-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0 0 6px;
+  letter-spacing: -0.3px;
+}
+
+.cs-form-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 36px;
+  line-height: 1.5;
+}
+
+/* ── Fields ── */
+.cs-field {
+  margin-bottom: 24px;
+}
+
+.cs-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.cs-input,
+.cs-select,
+.cs-textarea {
+  width: 100%;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #1a1a2e;
+  background: #fff;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.cs-input:focus,
+.cs-select:focus,
+.cs-textarea:focus {
+  outline: none;
+  border-color: #e87b35;
+  box-shadow: 0 0 0 3px rgba(232, 123, 53, 0.1);
+}
+
+.cs-input::placeholder,
+.cs-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* ── Logo Upload ── */
+.cs-logo-upload {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cs-logo-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px dashed #d4a574;
+  background: #fdf5ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.2s, background 0.2s;
+  overflow: hidden;
+}
+
+.cs-logo-circle:hover {
+  border-color: #e87b35;
+  background: #fef0e5;
+}
+
+.cs-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cs-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cs-logo-main {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a4a5a;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.cs-logo-hint {
+  font-size: 11px;
+  color: #9ca3af;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ── Phone + Specialization Row ── */
+.cs-row {
+  display: flex;
+  gap: 20px;
+}
+
+.cs-field-phone {
+  flex: 1;
+}
+
+.cs-field-spec {
+  flex: 0 0 220px;
+}
+
+.cs-phone-wrapper {
+  display: flex;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.cs-phone-wrapper:focus-within {
+  border-color: #e87b35;
+  box-shadow: 0 0 0 3px rgba(232, 123, 53, 0.1);
+}
+
+.cs-phone-prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a2e;
+  background: #f9fafb;
+  border-right: 1.5px solid #e5e7eb;
+  user-select: none;
+}
+
+.cs-input-phone {
+  border: none;
+  border-radius: 0;
+}
+
+.cs-input-phone:focus {
+  box-shadow: none;
+}
+
+.cs-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+/* ── Textarea ── */
+.cs-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.cs-textarea-lg {
+  min-height: 100px;
+}
+
+/* ── Buttons ── */
+.cs-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.cs-btn-create {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  background: #e87b35;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.cs-btn-create:hover {
+  background: #d06a2a;
+}
+
+.cs-btn-create:disabled {
+  background: #c4956a;
+  cursor: not-allowed;
+}
+
+.cs-error {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.cs-btn-create:active {
+  transform: scale(0.99);
+}
+
+.cs-btn-draft {
+  height: 50px;
+  padding: 0 32px;
+  background: #fff;
+  color: #1a1a2e;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.cs-btn-draft:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* ── Terms Footer ── */
+.cs-terms {
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.cs-terms a {
+  color: #e87b35;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cs-terms a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .cs-container {
+    flex-direction: column;
+  }
+
+  .cs-left {
+    width: 100%;
+    min-width: unset;
+    padding: 32px 24px;
+  }
+
+  .cs-headline {
+    font-size: 26px;
+  }
+
+  .cs-testimonial {
+    padding-top: 24px;
+  }
+
+  .cs-right {
+    padding: 32px 24px;
+  }
+
+  .cs-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cs-field-spec {
+    flex: 1;
+  }
+}
