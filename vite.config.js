@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.nidhimoortiarts.com',
+        target: 'https://mymurti-server-88q9.vercel.app',
         changeOrigin: true,
       },
     },
